@@ -63,7 +63,7 @@ class Spider:
             house_flood = address[4]
             if len(address) < 7:
                 house_year = ""
-                hour_building = address[5]
+                house_building = address[5]
             else:
                 house_year = address[5]
                 house_building = address[6]
