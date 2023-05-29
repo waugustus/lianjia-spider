@@ -61,8 +61,12 @@ class Spider:
             house_size = address[1]
             house_towards = address[2]
             house_flood = address[4]
-            house_year = address[5]
-            house_building = address[6]
+            if len(address) < 7:
+                house_year = ""
+                hour_building = address[5]
+            else:
+                house_year = address[5]
+                house_building = address[6]
 
 
             priceInfo = info.find("div" , {'class': 'priceInfo'}, recursive=False)
